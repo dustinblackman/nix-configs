@@ -2,10 +2,68 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
+
 let
+  inherit (pkgs) mkYarnPackage yarn2nix;
+
   locals = {
     username = "dustin";
+    # TODO Should add sizes
+    # TODO should add terminal/monospace config.
+    systemFont = {
+      package = pkgs.roboto;
+      name = "Roboto";
+    };
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
+    };
+    theme = {
+      package = import ./qogir-theme { inherit pkgs; };
+      name = "Qogir-dark";
+    };
+    plymouthTheme = "circle_hud";
+    shellTheme = "base16_seti";
+  };
+
+  localpkgs = {
+    coc = mkYarnPackage {
+      name = "coc";
+      src = ./vim;
+      packageJSON = ./vim/package.json;
+      yarnLock = ./vim/yarn.lock;
+    };
+
+    vimPlugins = import
+      (pkgs.runCommand "plugins.nix"
+        {
+          buildInputs = [ pkgs.nodejs-12_x ];
+        } "node ${./index.js} vimPlugins --vimrc=${./vim/init.vim} --snapshot=${./vim/snapshot.vim} > $out"
+      )
+      {
+        inherit
+          pkgs;
+      };
+  };
+
+  # TODO Finish this later.
+  # localfuncs = {
+  # template = filePath:
+  # pkgs.runCommand "file"
+  # {
+  # buildInputs = [ pkgs.nodejs-12_x ];
+  # } ''
+  # echo ${builtins.toJSON locals} > locals.json
+  # node ${./index.js} template --templatefile=${filePath} --locals=`pwd`/locals.json > $out
+  # '';
+  # };
+
+  base16shell = pkgs.fetchFromGitHub {
+    owner = "chriskempson";
+    repo = "base16-shell";
+    rev = "ce8e1e540367ea83cc3e01eec7b2a11783b3f9e1";
+    sha256 = "1yj36k64zz65lxh28bb5rb5skwlinixxz6qwkwaf845ajvm45j1q";
   };
 
   home-manager = builtins.fetchGit {
@@ -13,47 +71,78 @@ let
     rev = "63f299b3347aea183fc5088e4d6c4a193b334a41";
     ref = "release-20.09";
   };
+
+  hmLib = import "${home-manager}/modules/lib" {
+    inherit lib;
+  };
+
+  vim-plug = pkgs.fetchFromGitHub {
+    owner = "junegunn";
+    repo = "vim-plug";
+    rev = "8b45742540f92ba902c97ad1d3d8862ba3305438";
+    sha256 = "0ashl6qixnhgj5pnss9ri8w7fzixcsd0h4cmb2jpfrfma8s7xn3b";
+  };
 in
 {
 
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      (import "${home-manager}/nixos")
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./systems
+    (import "${home-manager}/nixos")
+  ];
 
-  # Use the GRUB 2 boot loader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  # boot.loader.grub.efiSupport = true;
-  # boot.loader.grub.efiInstallAsRemovable = true;
-  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
-  # Define on which hard drive you want to install Grub.
-  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+  nixpkgs.config.allowUnfree = true;
+
+  # Boot loader animation
+  # Boots so fast you never see it...
+  boot.plymouth = {
+    enable = true;
+    theme = "${locals.plymouthTheme}";
+    themePackages = [
+      (pkgs.stdenv.mkDerivation {
+        name = "plymouthTheme";
+        src = pkgs.fetchFromGitHub {
+          owner = "adi1090x";
+          repo = "plymouth-themes";
+          rev = "c2a068e44f476d79fcc87372ad0436d11cf65b14";
+          sha256 = "0w1a6dd7d6g91vhksq2c74rkprdrfcqx98q5yrl8scl525ngmihn";
+        };
+
+
+        buildInputs = [ pkgs.sd ];
+
+        installPhase = ''
+          mkdir -p $out/share/plymouth/themes
+          mv pack_*/* .
+          rm -rf pack_*
+          cp -r ${locals.plymouthTheme} $out/share/plymouth/themes/${locals.plymouthTheme}
+          sd "/usr/share/plymouth/themes" "/etc/plymouth/themes" $out/share/plymouth/themes/${locals.plymouthTheme}/${locals.plymouthTheme}.plymouth
+        '';
+      })
+    ];
+  };
+
+  # Set your time zone and locale.
+  time.timeZone = "America/Montreal";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.enp0s5.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  # };
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
 
   services.xserver = {
     enable = true;
@@ -108,7 +197,7 @@ in
           # RGB color(`rgb(r,g,b)`) are all acceptable formats.
 
           # The font to use for all text
-          font = "Anka/Coder Regular"
+          font = "${locals.systemFont.name}"
           # The font size to use for all text
           font-size = 12px
           # The default text color
@@ -119,11 +208,11 @@ in
           # The image will be displayed centered & unscaled.
           background-image = "/etc/nixos/background.jpg"
           # The screen's background color.
-          background-color = "#727282"
+          background-color = "#383c4a"
           # The password window's background color
-          window-color = "#37353a"
+          window-color = "#383c4a"
           # The color of the password window's border
-          border-color = "#967b5e"
+          border-color = "#d3dae3"
           # The width of the password window's border.
           # A trailing `px` is required.
           border-width = 2px
@@ -133,7 +222,7 @@ in
           # The color of the text in the password input.
           password-color = "#e1eef2"
           # The background color of the password input.
-          password-background-color = "#37353a"
+          password-background-color = "#383c4a"
           # The color of the password input's border.
           password-border-color = "#000000"
           # The width of the password input's border.
@@ -163,45 +252,57 @@ in
     isNormalUser = true;
     password = "abc"; # TODO Change on first login. Maybe validate through a post install script that the themes would
     # need
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # TODO sort
-    wget
-    vim
-    nixpkgs-fmt
+    dmidecode
     git
+    jq
+    neovim-remote
+    nixpkgs-fmt
+    nix-prefetch-github
     ripgrep
     sd
-    jq
+    vim
 
     # Languages
     go
     nodejs-12_x
+    yarn
     rustup
     python3
 
-    # Shell
-    antibody
-
     # Apps
+    albert
     xarchiver
     plank
+    xfce.xfce4-battery-plugin
+
+    # Themes. TODO switch to it on plank and other stuff. Need to finish new assets.
+    qogir-icon-theme
   ];
+
+  programs.zsh.enable = true;
 
   # Required for plank and other stuff.
   programs.dconf.enable = true;
   # Required for plank to work.
   services.bamf.enable = true;
 
-  fonts.fonts = with pkgs; [
-    ankacoder
-    ankacoder-condensed
-    (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
-  ];
+  fonts = {
+    fonts = with pkgs; [
+      ankacoder
+      ankacoder-condensed
+      (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
+      noto-fonts-emoji
+    ];
+    fontconfig.defaultFonts.emoji = [ "Noto Color Emoji" ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -211,122 +312,150 @@ in
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # TODO disable
-  services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
   home-manager.users."${locals.username}" = {
+    # Startup items
+    home.file.".xprofile".executable = true;
+    home.file.".xprofile".text = ''
+      #!/usr/bin/env bash
+      plank &
+      albert &
+    '';
+
+    # XFCE/GTK Theme.
     gtk = {
       enable = true;
-      font = {
-        package = pkgs.roboto;
-        name = "Roboto Regular";
-      };
-      iconTheme = {
-        package = pkgs.papirus-icon-theme;
-        name = "Papirus-Dark";
-      };
-      # TODO Need a post run script to change XFCE settings.
-      theme = {
-        package = pkgs.arc-theme;
-        name = "Arc-Dark";
-      };
+      font = locals.systemFont;
+      iconTheme = locals.iconTheme;
+      theme = locals.theme;
+    };
+    qt = {
+      enable = true;
+      platformTheme = "gtk";
+    };
+    # TODO add cursur theme and top bar transparency.
+    home.activation.xfceTheme = hmLib.dag.entryAfter [ "writeBoundary" ] ''
+      runChanges() {
+        export DISPLAY=:0.0
+        xfconf-query -c xsettings -p /Net/ThemeName -s "${locals.theme.name}"
+        xfconf-query -c xsettings -p /Net/IconThemeName -s "${locals.iconTheme.name}"
+        xfconf-query -c xsettings -p /Gtk/FontName -s "${locals.systemFont.name} 10"
+        xfconf-query -c xfwm4 -p /general/title_font -s "${locals.systemFont.name} 10"
+        xfconf-query -c xfwm4 -p /general/button_layout -s "CHM|"
+        xfconf-query -c xfwm4 -p /general/title_alignment -s "left"
+      }
+      $DRY_RUN_CMD runChanges
+    '';
+
+    # Albert
+    home.file.".config/albert/albert.conf".source = ./albert.conf;
+
+    # Plank
+    home.file.".local/share/plank/themes/${locals.theme.name}/dock.theme".source = "${locals.theme.package}/share/themes/${locals.theme.name}/plank/dock.theme";
+    dconf.settings."net/launchpad/plank/docks/dock1" = {
+      alignment = "center";
+      auto-pinning = true;
+      current-workspace-only = false;
+      hide-delay = 0;
+      hide-mode = "intelligent";
+      icon-size = 48;
+      items-alignment = "center";
+      lock-items = false;
+      monitor = "";
+      offset = 0;
+      pinned-only = false;
+      position = "left";
+      pressure-reveal = false;
+      show-dock-item = false;
+      theme = "${locals.theme.name}";
+      tooltips-enabled = true;
+      unhide-delay = 0;
+      zoom-enabled = true;
+      zoom-percent = 150;
     };
 
     programs.firefox = {
       enable = true;
     };
 
-    programs.kitty = {
+    programs.fzf = {
       enable = true;
-      extraConfig = ''
-        background_opacity 0.85
-        scrollback_lines 50000
-        mouse_hide_wait 0
-
-        macos_hide_titlebar yes
-        tab_bar_edge top
-        tab_bar_style fade
-        active_tab_font_style   bold-italic
-        inactive_tab_font_style normal
-
-        kitty_mod cmd
-        open_url_modifiers kitty_mod
-        map kitty_mod+c copy_to_clipboard
-        map kitty_mod+v paste_from_clipboard
-        map kitty_mod+t new_tab
-        map kitty_mod+w close_tab
-        map kitty_mod+right next_tab
-        map kitty_mod+left previous_tab
-        map kitty_mod+equal change_font_size all +1.0
-        map kitty_mod+minus change_font_size all -1.0
-
-        # https://fontlibrary.org/en/font/anka-coder-condensed
-        font_family Anka/Coder Condensed Regular
-        font_size 14.5
-        symbol_map U+e4fa-U+e52e,U+e5fa-U+e62e,U+e600-U+e6c5,U+e700-U+e7c5,U+e0a0-U+e0a2,U+e0b0-U+e0b3,U+e0a3-U+e0a3,U+e0b4-U+e0c8,U+e0ca-U+e0ca,U+e0cc-U+e0d4,U+e000-U+e00a,U+f000-U+f2e0,U+e000-U+e0a9,U+e200-U+e2a9,U+f100-U+f11c,U+f300-U+f31c,U+23fb-U+23fe,U+2b58-U+2b58,U+f000-U+f105,U+f400-U+f505,U+2665-U+2665,U+f27c-U+f27c,U+f4a9-U+f4a9,U+f001-U+f847,U+f500-U+fd46,U+f000-U+f0eb,U+e300-U+e3eb DroidSansMono Nerd Font Mono
-
-        # https://github.com/kdrag0n/base16-kitty/blob/master/colors/base16-seti-256.conf
-        background #151718
-        foreground #d6d6d6
-        selection_background #d6d6d6
-        selection_foreground #151718
-        url_color #43a5d5
-        cursor #d6d6d6
-        active_border_color #41535b
-        active_tab_background #151718
-        active_tab_foreground #d6d6d6
-        inactive_tab_background #282a2b
-        inactive_tab_foreground #43a5d5
-
-        # normal
-        color0 #151718
-        color1 #cd3f45
-        color2 #9fca56
-        color3 #e6cd69
-        color4 #55b5db
-        color5 #a074c4
-        color6 #55dbbe
-        color7 #d6d6d6
-
-        # bright
-        color8 #41535b
-        color9 #cd3f45
-        color10 #9fca56
-        color11 #e6cd69
-        color12 #55b5db
-        color13 #a074c4
-        color14 #55dbbe
-        color15 #d6d6d6
-
-        # extended base16 colors
-        color16 #db7b55
-        color17 #8a553f
-        color18 #282a2b
-        color19 #3b758c
-        color20 #43a5d5
-        color21 #eeeeee
+      enableZshIntegration = true;
+      defaultCommand = ''
+        rg -l ""
       '';
     };
 
-    programs.neovim = {
+    programs.kitty = {
       enable = true;
+      extraConfig = (builtins.readFile ./kitty.conf);
     };
 
-    programs.rofi = {
+    # Neovim
+    home.file."./.config/nvim/init.vim".source = ./vim/init.vim;
+    home.file."./.config/nvim/coc-settings.json".source = ./vim/coc-settings.json;
+    home.file.".local/share/nvim/site/autoload/plug.vim".source = "${vim-plug}/plug.vim";
+    home.file.".vim/plugged".source = localpkgs.vimPlugins.dir;
+    home.file.".vim/plugged".recursive = true;
+
+    home.file.".config/coc/extensions/package.json".source = "${localpkgs.coc}/libexec/coc/deps/coc/package.json";
+    home.file.".config/coc/extensions/yarn.lock".source = "${localpkgs.coc}/libexec/coc/deps/coc/yarn.lock";
+    home.file.".config/coc/extensions/node_modules".source = "${localpkgs.coc}/libexec/coc/node_modules";
+
+    programs.neovim = {
       enable = true;
+      # Not using helpers to move vim config. Doing it by hand.
+      # TODO Need 0.5.0 dev branch.
+    };
+
+    programs.tmux = {
+      enable = true;
+      extraConfig = (builtins.readFile ./tmux.conf);
+      keyMode = "vi";
+      plugins = with pkgs; [
+        tmuxPlugins.copycat
+        tmuxPlugins.prefix-highlight
+        tmuxPlugins.sensible
+      ];
     };
 
     programs.zsh = {
       enable = true;
+      prezto = {
+        enable = true;
+        tmux.autoStartLocal = true;
+        pmodules = [
+          "environment"
+          "terminal"
+          "editor"
+          "history"
+          "directory"
+          "spectrum"
+          "utility"
+          "completion"
+          "history-substring-search"
+          "syntax-highlighting"
+          "command-not-found"
+          "git"
+          "tmux"
+          "prompt"
+        ];
+      };
+      plugins = [
+        {
+          name = "alias-tips";
+          # TODO Change to fetchFromGitHub
+          src = builtins.fetchGit {
+            url = "https://github.com/djui/alias-tips.git";
+            rev = "40d8e206c6d6e41e039397eb455bedca578d2ef8";
+            ref = "master";
+          };
+        }
+      ];
+      initExtra = ''
+        export THEME="${locals.shellTheme}"
+        export THEME_DASH=$(echo "$THEME" | sed 's/_/-/g')
+        source "${base16shell}/scripts/${"\${THEME_DASH}"}.sh"
+      '';
     };
   };
 
@@ -337,6 +466,4 @@ in
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "20.09"; # Did you read the comment?
-
 }
-

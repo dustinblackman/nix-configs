@@ -1,0 +1,71 @@
+{
+  "coc.source.gocode.enable": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "rust",
+    "marko",
+    "marko.html"
+  ],
+  "html.filetypes": [
+    "html"
+  ],
+  "python.jediEnabled": false,
+  "languageserver": {
+    "nix": {
+      "command": "rnix-lsp",
+      "filetypes": [
+        "nix"
+      ]
+    },
+    "go-langserver": {
+      "command": "gopls",
+      "args": [
+        "serve"
+      ],
+      "filetypes": [
+        "go"
+      ],
+      "trace.server": "verbose",
+      "enable": true,
+      "initializationOptions": {
+        "diagnosticsEnabled": true
+      }
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": [
+        "dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
+    },
+    "intelephense": {
+      "command": "node",
+      "args": [
+        "/usr/local/lib/node_modules/intelephense/lib/intelephense.js",
+        "--stdio"
+      ],
+      "filetypes": [
+        "php"
+      ]
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "args": [],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ]
+    },
+    "marko": {
+      "command": "marko-language-server",
+      "filetypes": [
+        "marko",
+        "marko.html"
+      ],
+      "args": [
+        "--stdio"
+      ]
+    }
+  }
+}

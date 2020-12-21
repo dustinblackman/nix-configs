@@ -1,0 +1,650 @@
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="204" height="197" viewBox="0 0 204 197">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #282a33;
+      }
+
+      .cls-2, .cls-35, .cls-36 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0.1;
+      }
+
+      .cls-13, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: #a4aab7;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-6 {
+        fill: #b9bfce;
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-9 {
+        fill: #3d3f47;
+      }
+
+      .cls-10 {
+        fill: #e1a73e;
+      }
+
+      .cls-10, .cls-11, .cls-12, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32 {
+        fill-rule: evenodd;
+      }
+
+      .cls-11 {
+        fill: #f6be50;
+      }
+
+      .cls-12 {
+        fill: #90591d;
+      }
+
+      .cls-14 {
+        fill: none;
+      }
+
+      .cls-15 {
+        fill: #2dac2f;
+      }
+
+      .cls-16 {
+        fill: #61c555;
+      }
+
+      .cls-17 {
+        fill: #2a6218;
+      }
+
+      .cls-18 {
+        fill: #e24b41;
+      }
+
+      .cls-19 {
+        fill: #ed6a5f;
+      }
+
+      .cls-20 {
+        opacity: 0.7;
+      }
+
+      .cls-21 {
+        fill: #460804;
+      }
+
+      .cls-22 {
+        fill: #d1d0d2;
+      }
+
+      .cls-23 {
+        fill: #c7c7c7;
+      }
+
+      .cls-24 {
+        fill: #a67f36;
+      }
+
+      .cls-25 {
+        fill: #b8923b;
+      }
+
+      .cls-26 {
+        fill: #532a0a;
+      }
+
+      .cls-27 {
+        fill: #428234;
+      }
+
+      .cls-28 {
+        fill: #4a9741;
+      }
+
+      .cls-29 {
+        fill: #113107;
+      }
+
+      .cls-30 {
+        fill: #a14239;
+      }
+
+      .cls-31 {
+        fill: #b15048;
+      }
+
+      .cls-32 {
+        fill: #170101;
+      }
+
+      .cls-33 {
+        fill: #1f1f1f;
+        fill-opacity: 0;
+      }
+
+      .cls-34 {
+        fill: #d3dae3;
+      }
+
+      .cls-35 {
+        fill-opacity: 0.1;
+      }
+
+      .cls-36 {
+        fill-opacity: 0.2;
+      }
+
+      .cls-37 {
+        opacity: 0.5;
+      }
+
+      .cls-38 {
+        fill: #7e828b;
+      }
+
+      .cls-39 {
+        fill: #5294e2;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="152" y1="-346.36" x2="152" y2="-354.36" gradientTransform="matrix(1, 0, 0, -1, 20, -336.36)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5294e2"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="662.36" y1="854" x2="662.36" y2="846" gradientTransform="matrix(0, 1, 1, 0, -678, -648.36)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="702.36" y1="856" x2="702.36" y2="848" gradientTransform="matrix(0, 1, 1, 0, -680, -652.36)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="154" y1="-383.86" x2="154" y2="-388.36" gradientTransform="matrix(1, 0, 0, -1, 28, -330.36)" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>assets</title>
+  <g id="layer1">
+    <rect id="menu-active" class="cls-1" x="80" y="132" width="26" height="16"/>
+    <g id="title-1-active">
+      <g id="g4206">
+        <rect id="rect4138" class="cls-1" y="132" width="5" height="28"/>
+        <rect id="rect4204" class="cls-2" y="132" width="5" height="1"/>
+      </g>
+    </g>
+    <g id="stick-active">
+      <g id="use4210">
+        <g id="g4206-2" data-name="g4206">
+          <rect id="rect4138-2" data-name="rect4138" class="cls-1" x="140" width="18" height="28"/>
+          <rect id="rect4204-2" data-name="rect4204" class="cls-2" x="140" width="18" height="1"/>
+        </g>
+      </g>
+      <g id="g5140">
+        <rect id="rect5123" class="cls-3" x="148" y="10" width="2" height="8"/>
+        <rect id="rect5123-1" class="cls-3" x="145" y="13" width="8" height="2"/>
+      </g>
+    </g>
+    <g id="stick-pressed">
+      <g id="use5113">
+        <g id="use4210-2" data-name="use4210">
+          <g id="g4206-3" data-name="g4206">
+            <rect id="rect4138-3" data-name="rect4138" class="cls-1" x="163" width="18" height="28"/>
+            <rect id="rect4204-3" data-name="rect4204" class="cls-2" x="163" width="18" height="1"/>
+          </g>
+        </g>
+      </g>
+      <g id="g5140-7">
+        <rect id="rect5123-7" class="cls-4" x="171" y="10" width="2" height="8"/>
+        <rect id="rect5123-1-1" class="cls-5" x="168" y="13" width="8" height="2"/>
+      </g>
+    </g>
+    <g id="stick-inactive">
+      <g id="use5115">
+        <g id="use4210-3" data-name="use4210">
+          <g id="g4206-4" data-name="g4206">
+            <rect id="rect4138-4" data-name="rect4138" class="cls-1" x="186" width="18" height="28"/>
+            <rect id="rect4204-4" data-name="rect4204" class="cls-2" x="186" width="18" height="1"/>
+          </g>
+        </g>
+      </g>
+      <g id="g5140-1">
+        <rect id="rect5123-5" class="cls-6" x="194" y="10" width="2" height="8"/>
+        <rect id="rect5123-1-9" class="cls-6" x="191" y="13" width="8" height="2"/>
+      </g>
+    </g>
+    <g id="shade-active">
+      <g id="use5117">
+        <g id="use4210-4" data-name="use4210">
+          <g id="g4206-5" data-name="g4206">
+            <rect id="rect4138-5" data-name="rect4138" class="cls-1" x="140" y="33" width="18" height="28"/>
+            <rect id="rect4204-5" data-name="rect4204" class="cls-2" x="140" y="33" width="18" height="1"/>
+          </g>
+        </g>
+      </g>
+      <g id="g5193">
+        <rect id="rect5123-1-7" class="cls-3" x="145" y="49" width="8" height="2"/>
+        <path id="rect5190" class="cls-3" d="M159,53.5l4,4.5h-8Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="shade-pressed">
+      <g id="use5119">
+        <g id="use4210-5" data-name="use4210">
+          <g id="g4206-6" data-name="g4206">
+            <rect id="rect4138-6" data-name="rect4138" class="cls-1" x="163" y="33" width="18" height="28"/>
+            <rect id="rect4204-6" data-name="rect4204" class="cls-2" x="163" y="33" width="18" height="1"/>
+          </g>
+        </g>
+      </g>
+      <g id="g5193-7">
+        <rect id="rect5123-1-7-6" class="cls-7" x="168" y="49" width="8" height="2"/>
+        <path id="rect5190-7" class="cls-8" d="M182,53.5l4,4.5h-8Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="shade-inactive">
+      <g id="use5121">
+        <g id="use4210-6" data-name="use4210">
+          <g id="g4206-7" data-name="g4206">
+            <rect id="rect4138-7" data-name="rect4138" class="cls-1" x="186" y="33" width="18" height="28"/>
+            <rect id="rect4204-7" data-name="rect4204" class="cls-2" x="186" y="33" width="18" height="1"/>
+          </g>
+        </g>
+      </g>
+      <g id="g5193-3">
+        <rect id="rect5123-1-7-65" class="cls-6" x="191" y="49" width="8" height="2"/>
+        <path id="rect5190-6" class="cls-6" d="M205,53.5l4,4.5h-8Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="menu-inactive">
+      <rect id="menu-active-2" data-name="menu-active" class="cls-1" x="142" y="132" width="26" height="16"/>
+    </g>
+    <g id="menu-pressed">
+      <rect id="menu-active-3" data-name="menu-active" class="cls-1" x="111" y="132" width="26" height="16"/>
+    </g>
+    <g id="title-2-active">
+      <g id="title-1-active-2" data-name="title-1-active">
+        <g id="g4206-8" data-name="g4206">
+          <rect id="rect4138-8" data-name="rect4138" class="cls-1" x="7" y="132" width="5" height="28"/>
+          <rect id="rect4204-8" data-name="rect4204" class="cls-2" x="7" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-3-active">
+      <g id="title-1-active-3" data-name="title-1-active">
+        <g id="g4206-9" data-name="g4206">
+          <rect id="rect4138-9" data-name="rect4138" class="cls-1" x="14" y="132" width="5" height="28"/>
+          <rect id="rect4204-9" data-name="rect4204" class="cls-2" x="14" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-4-active">
+      <g id="title-1-active-4" data-name="title-1-active">
+        <g id="g4206-10" data-name="g4206">
+          <rect id="rect4138-10" data-name="rect4138" class="cls-1" x="21" y="132" width="5" height="28"/>
+          <rect id="rect4204-10" data-name="rect4204" class="cls-2" x="21" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-5-active">
+      <g id="title-1-active-5" data-name="title-1-active">
+        <g id="g4206-11" data-name="g4206">
+          <rect id="rect4138-11" data-name="rect4138" class="cls-1" x="28" y="132" width="5" height="28"/>
+          <rect id="rect4204-11" data-name="rect4204" class="cls-2" x="28" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-1-inactive">
+      <g id="title-1-active-6" data-name="title-1-active">
+        <g id="g4206-12" data-name="g4206">
+          <rect id="rect4138-12" data-name="rect4138" class="cls-1" x="35" y="132" width="5" height="28"/>
+          <rect id="rect4204-12" data-name="rect4204" class="cls-2" x="35" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-2-inactive">
+      <g id="title-1-active-7" data-name="title-1-active">
+        <g id="g4206-13" data-name="g4206">
+          <rect id="rect4138-13" data-name="rect4138" class="cls-1" x="42" y="132" width="5" height="28"/>
+          <rect id="rect4204-13" data-name="rect4204" class="cls-2" x="42" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-3-inactive">
+      <g id="title-1-active-8" data-name="title-1-active">
+        <g id="g4206-14" data-name="g4206">
+          <rect id="rect4138-14" data-name="rect4138" class="cls-1" x="49" y="132" width="5" height="28"/>
+          <rect id="rect4204-14" data-name="rect4204" class="cls-2" x="49" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-4-inactive">
+      <g id="title-1-active-9" data-name="title-1-active">
+        <g id="g4206-15" data-name="g4206">
+          <rect id="rect4138-15" data-name="rect4138" class="cls-1" x="56" y="132" width="5" height="28"/>
+          <rect id="rect4204-15" data-name="rect4204" class="cls-2" x="56" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="title-5-inactive">
+      <g id="title-1-active-10" data-name="title-1-active">
+        <g id="g4206-16" data-name="g4206">
+          <rect id="rect4138-16" data-name="rect4138" class="cls-1" x="63" y="132" width="5" height="28"/>
+          <rect id="rect4204-16" data-name="rect4204" class="cls-2" x="63" y="132" width="5" height="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="top-left-active">
+      <path id="rect4138-9-2" data-name="rect4138-9" class="cls-1" d="M11,179H10v28h2V179Z" transform="translate(-10 -10)"/>
+      <rect id="rect5348" class="cls-2" x="1" y="169" width="1" height="1"/>
+      <rect id="rect5350" class="cls-2" y="169" width="1" height="28"/>
+    </g>
+    <g id="top-left-inactive">
+      <g id="top-left-active-2" data-name="top-left-active">
+        <path id="rect4138-9-3" data-name="rect4138-9" class="cls-1" d="M15,179H14v28h2V179Z" transform="translate(-10 -10)"/>
+        <rect id="rect5348-2" data-name="rect5348" class="cls-2" x="5" y="169" width="1" height="1"/>
+        <rect id="rect5350-2" data-name="rect5350" class="cls-2" x="4" y="169" width="1" height="28"/>
+      </g>
+    </g>
+    <g id="top-right-active">
+      <g id="top-left-active-3" data-name="top-left-active">
+        <path id="rect4138-9-4" data-name="rect4138-9" class="cls-1" d="M19,179h1v28H18V179Z" transform="translate(-10 -10)"/>
+        <rect id="rect5348-3" data-name="rect5348" class="cls-2" x="8" y="169" width="1" height="1"/>
+        <rect id="rect5350-3" data-name="rect5350" class="cls-2" x="9" y="169" width="1" height="28"/>
+      </g>
+    </g>
+    <g id="top-right-inactive">
+      <g id="top-left-active-4" data-name="top-left-active">
+        <path id="rect4138-9-5" data-name="rect4138-9" class="cls-1" d="M23,179h1v28H22V179Z" transform="translate(-10 -10)"/>
+        <rect id="rect5348-4" data-name="rect5348" class="cls-2" x="12" y="169" width="1" height="1"/>
+        <rect id="rect5350-4" data-name="rect5350" class="cls-2" x="13" y="169" width="1" height="28"/>
+      </g>
+    </g>
+    <rect id="right-active" class="cls-9" x="31" y="177" width="1" height="16"/>
+    <rect id="right-inactive" class="cls-9" x="33" y="177" width="1" height="16"/>
+    <rect id="bottom-inactive" class="cls-9" x="39" y="190" width="16" height="1"/>
+    <rect id="left-active" class="cls-9" x="27" y="177" width="1" height="16"/>
+    <rect id="left-inactive" class="cls-9" x="29" y="177" width="1" height="16"/>
+    <rect id="bottom-active" class="cls-9" x="39" y="186" width="16" height="1"/>
+    <path id="bottom-left-active" class="cls-9" d="M47,196v1h1v-1Z" transform="translate(-10 -10)"/>
+    <path id="bottom-right-active" class="cls-9" d="M66,196v1h1v-1Z" transform="translate(-10 -10)"/>
+    <path id="bottom-right-inactive" class="cls-9" d="M66,200v1h1v-1Z" transform="translate(-10 -10)"/>
+    <path id="bottom-left-inactive" class="cls-9" d="M47,200v1h1v-1Z" transform="translate(-10 -10)"/>
+    <g id="hide-prelight">
+      <g id="use4226">
+        <g id="g4206-17" data-name="g4206">
+          <rect id="rect4138-17" data-name="rect4138" class="cls-1" x="35" y="66" width="24" height="28"/>
+          <rect id="rect4204-17" data-name="rect4204" class="cls-2" x="35" y="66" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-minimize-hover-c">
+        <path class="cls-10" d="M57.43,97.5a7,7,0,1,0-7-7A7,7,0,0,0,57.43,97.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-11" d="M57.43,96.91A6.41,6.41,0,1,0,51,90.5,6.41,6.41,0,0,0,57.43,96.91Z" transform="translate(-10 -10)"/>
+        <path class="cls-12" d="M53.35,89.91h8.18a.58.58,0,0,1,.57.57v0a.58.58,0,0,1-.57.57H53.35a.59.59,0,0,1-.58-.57v0A.57.57,0,0,1,53.35,89.91Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="maximize-prelight">
+      <g id="use4222">
+        <g id="g4206-18" data-name="g4206">
+          <rect id="rect4138-18" data-name="rect4138" class="cls-1" x="35" y="33" width="24" height="28"/>
+          <rect id="rect4204-18" data-name="rect4204" class="cls-2" x="35" y="33" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="g4569" class="cls-13">
+        <g id="layer1-2">
+          <g id="titlebutton-max-hover">
+            <rect id="rect17883-0" class="cls-14" x="40.14" y="39" width="13.71" height="16"/>
+          </g>
+        </g>
+      </g>
+      <g id="titlebutton-maximize-hover-c">
+        <path class="cls-15" d="M57.43,64.5a7,7,0,1,0-7-7A7,7,0,0,0,57.43,64.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-16" d="M57.43,63.91A6.41,6.41,0,1,0,51,57.5,6.41,6.41,0,0,0,57.43,63.91Z" transform="translate(-10 -10)"/>
+        <path class="cls-17" d="M55.54,53.91h4.38A1.07,1.07,0,0,1,61,55v4.37Zm3.81,7.16H55A1.05,1.05,0,0,1,53.89,60v-4.4Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="close-prelight">
+      <g id="use4214">
+        <g id="g4206-19" data-name="g4206">
+          <rect id="rect4138-19" data-name="rect4138" class="cls-1" x="35" width="24" height="28"/>
+          <rect id="rect4204-19" data-name="rect4204" class="cls-2" x="35" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-close-hover-c">
+        <path class="cls-18" d="M57.43,31.5a7,7,0,1,0-7-7A7,7,0,0,0,57.43,31.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-19" d="M57.43,30.91A6.41,6.41,0,1,0,51,24.5,6.41,6.41,0,0,0,57.43,30.91Z" transform="translate(-10 -10)"/>
+        <g class="cls-20">
+          <path class="cls-21" d="M54.12,27l5.78-5.79a.57.57,0,0,1,.82,0h0a.57.57,0,0,1,0,.82L55,27.81a.57.57,0,0,1-.82,0h0A.59.59,0,0,1,54.12,27Z" transform="translate(-10 -10)"/>
+          <path class="cls-21" d="M55,21.19,60.74,27a.57.57,0,0,1,0,.82h0a.57.57,0,0,1-.82,0L54.12,22a.57.57,0,0,1,0-.82h0A.61.61,0,0,1,55,21.19Z" transform="translate(-10 -10)"/>
+        </g>
+      </g>
+    </g>
+    <g id="hide-inactive">
+      <g id="use4238">
+        <g id="g4206-20" data-name="g4206">
+          <rect id="rect4138-20" data-name="rect4138" class="cls-1" x="101" y="66" width="24" height="28"/>
+          <rect id="rect4204-20" data-name="rect4204" class="cls-2" x="101" y="66" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-minimize-backdrop-c">
+        <path class="cls-22" d="M123.43,97.5a7,7,0,1,0-7-7A7,7,0,0,0,123.43,97.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-23" d="M123.43,96.89A6.41,6.41,0,1,0,117,90.48,6.41,6.41,0,0,0,123.43,96.89Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="maximize-inactive">
+      <g id="use4232">
+        <g id="g4206-21" data-name="g4206">
+          <rect id="rect4138-21" data-name="rect4138" class="cls-1" x="101" y="33" width="24" height="28"/>
+          <rect id="rect4204-21" data-name="rect4204" class="cls-2" x="101" y="33" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-maximize-backdrop-c">
+        <path class="cls-22" d="M123.43,64.5a7,7,0,1,0-7-7A7,7,0,0,0,123.43,64.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-23" d="M123.43,63.89A6.41,6.41,0,1,0,117,57.48,6.41,6.41,0,0,0,123.43,63.89Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="close-inactive">
+      <g id="use4218">
+        <g id="g4206-22" data-name="g4206">
+          <rect id="rect4138-22" data-name="rect4138" class="cls-1" x="101" width="24" height="28"/>
+          <rect id="rect4204-22" data-name="rect4204" class="cls-2" x="101" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-close-backdrop-c">
+        <path class="cls-22" d="M123.43,31.5a7,7,0,1,0-7-7A7,7,0,0,0,123.43,31.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-23" d="M123.43,30.89A6.41,6.41,0,1,0,117,24.48,6.41,6.41,0,0,0,123.43,30.89Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="hide-pressed">
+      <g id="use4236">
+        <g id="g4206-23" data-name="g4206">
+          <rect id="rect4138-23" data-name="rect4138" class="cls-1" x="68" y="66" width="24" height="28"/>
+          <rect id="rect4204-23" data-name="rect4204" class="cls-2" x="68" y="66" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-minimize-active-c">
+        <path class="cls-24" d="M90.43,97.5a7,7,0,1,0-7-7A7,7,0,0,0,90.43,97.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-25" d="M90.43,96.89A6.41,6.41,0,1,0,84,90.48,6.41,6.41,0,0,0,90.43,96.89Z" transform="translate(-10 -10)"/>
+        <path class="cls-26" d="M86.33,89.91h8.18a.58.58,0,0,1,.57.57v0a.58.58,0,0,1-.57.57H86.33a.58.58,0,0,1-.57-.57v0A.58.58,0,0,1,86.33,89.91Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="maximize-pressed">
+      <g id="use4228">
+        <g id="g4206-24" data-name="g4206">
+          <rect id="rect4138-24" data-name="rect4138" class="cls-1" x="68" y="33" width="24" height="28"/>
+          <rect id="rect4204-24" data-name="rect4204" class="cls-2" x="68" y="33" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-maximize-active-c">
+        <path class="cls-27" d="M90.43,64.5a7,7,0,1,0-7-7A7,7,0,0,0,90.43,64.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-28" d="M90.43,63.91A6.41,6.41,0,1,0,84,57.5,6.41,6.41,0,0,0,90.43,63.91Z" transform="translate(-10 -10)"/>
+        <path class="cls-29" d="M88.54,53.91h4.38A1.07,1.07,0,0,1,94,55v4.37Zm3.81,7.16H88A1.05,1.05,0,0,1,86.89,60v-4.4Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="close-pressed">
+      <g id="use4216">
+        <g id="g4206-25" data-name="g4206">
+          <rect id="rect4138-25" data-name="rect4138" class="cls-1" x="68" width="24" height="28"/>
+          <rect id="rect4204-25" data-name="rect4204" class="cls-2" x="68" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-close-active-c">
+        <path class="cls-30" d="M90.43,31.5a7,7,0,1,0-7-7A7,7,0,0,0,90.43,31.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-31" d="M90.43,30.89A6.41,6.41,0,1,0,84,24.48,6.41,6.41,0,0,0,90.43,30.89Z" transform="translate(-10 -10)"/>
+        <g class="cls-20">
+          <path class="cls-32" d="M87.12,27l5.78-5.79a.57.57,0,0,1,.82,0h0a.57.57,0,0,1,0,.82L88,27.81a.57.57,0,0,1-.82,0h0A.57.57,0,0,1,87.12,27Z" transform="translate(-10 -10)"/>
+          <path class="cls-32" d="M87.94,21.19,93.72,27a.57.57,0,0,1,0,.82h0a.57.57,0,0,1-.82,0L87.1,22a.57.57,0,0,1,0-.82h0A.57.57,0,0,1,87.94,21.19Z" transform="translate(-10 -10)"/>
+        </g>
+      </g>
+    </g>
+    <g id="hide-active">
+      <g id="use4234">
+        <g id="g4206-26" data-name="g4206">
+          <rect id="rect4138-26" data-name="rect4138" class="cls-1" x="2" y="66" width="24" height="28"/>
+          <rect id="rect4204-26" data-name="rect4204" class="cls-2" x="2" y="66" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-minimize-c">
+        <path class="cls-10" d="M24.43,97.5a7,7,0,1,0-7-7A7,7,0,0,0,24.43,97.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-11" d="M24.43,96.91A6.41,6.41,0,1,0,18,90.5,6.41,6.41,0,0,0,24.43,96.91Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="maximize-active">
+      <g id="use4220">
+        <g id="g4206-27" data-name="g4206">
+          <rect id="rect4138-27" data-name="rect4138" class="cls-1" x="2" y="33" width="24" height="28"/>
+          <rect id="rect4204-27" data-name="rect4204" class="cls-2" x="2" y="33" width="24" height="1"/>
+        </g>
+      </g>
+      <g id="titlebutton-maximize-c">
+        <path class="cls-15" d="M24.43,64.5a7,7,0,1,0-7-7A7,7,0,0,0,24.43,64.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-16" d="M24.43,63.91A6.41,6.41,0,1,0,18,57.5,6.41,6.41,0,0,0,24.43,63.91Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="close-active">
+      <g id="g4206-28" data-name="g4206">
+        <rect id="rect4138-28" data-name="rect4138" class="cls-1" x="2" width="24" height="28"/>
+        <rect id="rect4204-28" data-name="rect4204" class="cls-2" x="2" width="24" height="1"/>
+      </g>
+      <g id="titlebutton-close-c">
+        <path class="cls-18" d="M24.43,31.5a7,7,0,1,0-7-7A7,7,0,0,0,24.43,31.5Z" transform="translate(-10 -10)"/>
+        <path class="cls-19" d="M24.43,30.91A6.41,6.41,0,1,0,18,24.5,6.41,6.41,0,0,0,24.43,30.91Z" transform="translate(-10 -10)"/>
+      </g>
+    </g>
+    <g id="maximize-toggled-active">
+      <g id="g233">
+        <g id="use4220-2">
+          <g id="g4206-29" data-name="g4206">
+            <rect id="rect4138-29" data-name="rect4138" class="cls-1" y="99" width="28" height="28"/>
+            <rect id="rect4204-29" data-name="rect4204" class="cls-2" y="99" width="28" height="1"/>
+          </g>
+        </g>
+        <g id="titlebutton-maximize-c-2">
+          <path id="rect680-8" class="cls-33" d="M24.5,112h0A11.5,11.5,0,0,1,36,123.5h0A11.5,11.5,0,0,1,24.5,135h0A11.5,11.5,0,0,1,13,123.5h0A11.5,11.5,0,0,1,24.5,112Z" transform="translate(-10 -10)"/>
+        </g>
+      </g>
+      <path id="path664-8" class="cls-34" d="M22,119v2H20v7h7v-2h2v-7Zm1,1h5v5H27v-4H23Zm-2,2h5v5H21Z" transform="translate(-10 -10)"/>
+    </g>
+    <g id="maximize-toggled-prelight">
+      <g id="g4873">
+        <g id="maximize-prelight-3">
+          <g id="use4222-6">
+            <g id="g4206-30" data-name="g4206">
+              <rect id="rect4138-30" data-name="rect4138" class="cls-1" x="33" y="99" width="28" height="28"/>
+              <rect id="rect4204-30" data-name="rect4204" class="cls-2" x="33" y="99" width="28" height="1"/>
+            </g>
+          </g>
+          <g id="g4569-7" class="cls-13">
+            <g id="layer1-2-5">
+              <g id="titlebutton-max-hover-3">
+                <rect id="rect17883-0-0" class="cls-14" x="39" y="105" width="16" height="16"/>
+              </g>
+            </g>
+          </g>
+          <g id="titlebutton-maximize-hover-c-6">
+            <path id="rect575-2" class="cls-35" d="M57.5,112h0A11.5,11.5,0,0,1,69,123.5h0A11.5,11.5,0,0,1,57.5,135h0A11.5,11.5,0,0,1,46,123.5h0A11.5,11.5,0,0,1,57.5,112Z" transform="translate(-10 -10)"/>
+          </g>
+        </g>
+      </g>
+      <path id="path664-8-3" class="cls-34" d="M55,119v2H53v7h7v-2h2v-7Zm1,1h5v5H60v-4H56Zm-2,2h5v5H54Z" transform="translate(-10 -10)"/>
+    </g>
+    <g id="maximize-toggled-pressed">
+      <g id="g4880">
+        <g id="maximize-pressed-0">
+          <g id="use4228-2">
+            <g id="g4206-31" data-name="g4206">
+              <rect id="rect4138-31" data-name="rect4138" class="cls-1" x="66" y="99" width="28" height="28"/>
+              <rect id="rect4204-31" data-name="rect4204" class="cls-2" x="66" y="99" width="28" height="1"/>
+            </g>
+          </g>
+          <g id="titlebutton-maximize-active-c-3">
+            <path id="rect656-7" class="cls-36" d="M90.5,112h0A11.5,11.5,0,0,1,102,123.5h0A11.5,11.5,0,0,1,90.5,135h0A11.5,11.5,0,0,1,79,123.5h0A11.5,11.5,0,0,1,90.5,112Z" transform="translate(-10 -10)"/>
+          </g>
+        </g>
+      </g>
+      <path id="path664-8-6" class="cls-34" d="M88,119v2H86v7h7v-2h2v-7Zm1,1h5v5H93v-4H89Zm-2,2h5v5H87Z" transform="translate(-10 -10)"/>
+    </g>
+    <g id="maximize-toggled-inactive">
+      <g id="g4887">
+        <g id="maximize-inactive-1">
+          <g id="use4232-8">
+            <g id="g4206-32" data-name="g4206">
+              <rect id="rect4138-32" data-name="rect4138" class="cls-1" x="99" y="99" width="28" height="28"/>
+              <rect id="rect4204-32" data-name="rect4204" class="cls-2" x="99" y="99" width="28" height="1"/>
+            </g>
+          </g>
+          <g id="titlebutton-maximize-backdrop-c-7" class="cls-37">
+            <path id="rect632-9" class="cls-33" d="M123.5,112h0A11.5,11.5,0,0,1,135,123.5h0A11.5,11.5,0,0,1,123.5,135h0A11.5,11.5,0,0,1,112,123.5h0A11.5,11.5,0,0,1,123.5,112Z" transform="translate(-10 -10)"/>
+          </g>
+        </g>
+      </g>
+      <path id="path664-8-7" class="cls-38" d="M121,119v2h-2v7h7v-2h2v-7Zm1,1h5v5h-1v-4h-4Zm-2,2h5v5h-5Z" transform="translate(-10 -10)"/>
+    </g>
+    <g id="stick-toggled-active">
+      <g id="g5528">
+        <g id="use4210-7">
+          <g id="g4206-33" data-name="g4206">
+            <rect id="rect4138-33" data-name="rect4138" class="cls-1" x="140" y="66" width="18" height="28"/>
+            <rect id="rect4204-33" data-name="rect4204" class="cls-2" x="140" y="66" width="18" height="1"/>
+          </g>
+        </g>
+      </g>
+      <circle id="path272" class="cls-3" cx="149" cy="80" r="4"/>
+    </g>
+    <g id="stick-toggled-pressed">
+      <g id="g5234">
+        <g id="use5113-2">
+          <g id="use4210-7-2" data-name="use4210-7">
+            <g id="g4206-34" data-name="g4206">
+              <rect id="rect4138-34" data-name="rect4138" class="cls-1" x="163" y="66" width="18" height="28"/>
+              <rect id="rect4204-34" data-name="rect4204" class="cls-2" x="163" y="66" width="18" height="1"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <circle id="path272-0" class="cls-39" cx="172" cy="80" r="4"/>
+    </g>
+    <g id="stick-toggled-inactive">
+      <g id="g5240">
+        <g id="use5115-0">
+          <g id="use4210-7-3" data-name="use4210-7">
+            <g id="g4206-35" data-name="g4206">
+              <rect id="rect4138-35" data-name="rect4138" class="cls-1" x="186" y="66" width="18" height="28"/>
+              <rect id="rect4204-35" data-name="rect4204" class="cls-2" x="186" y="66" width="18" height="1"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <circle id="path272-6" class="cls-6" cx="195" cy="80" r="4"/>
+    </g>
+  </g>
+</svg>

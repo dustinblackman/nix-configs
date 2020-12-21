@@ -1,0 +1,22 @@
+{
+  "name": "coc",
+  "version": "0.0.0",
+  "dependencies": {
+    "coc-css": ">=1.2.3",
+    "coc-dictionary": "^1.2.2",
+    "coc-emmet": ">=1.1.4",
+    "coc-emoji": "^1.2.3",
+    "coc-html": ">=1.2.4",
+    "coc-json": ">=1.2.6",
+    "coc-python": ">=1.2.12",
+    "coc-rust-analyzer": ">=0.7.2",
+    "coc-solargraph": ">=1.1.7",
+    "coc-sql": ">=0.2.24",
+    "coc-syntax": "^1.2.4",
+    "coc-tag": "^1.2.4",
+    "coc-tsserver": ">=1.4.15",
+    "coc-vetur": ">=1.1.10",
+    "coc-word": "^1.2.2",
+    "coc-yaml": ">=1.0.4"
+  }
+}
