@@ -139,7 +139,7 @@ in
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 8080 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
@@ -284,7 +284,7 @@ in
     plank
     xfce.xfce4-battery-plugin
 
-    # Themes. TODO switch to it on plank and other stuff. Need to finish new assets.
+    # Themes.
     qogir-icon-theme
   ];
 
@@ -456,6 +456,17 @@ in
         export THEME="${locals.shellTheme}"
         export THEME_DASH=$(echo "$THEME" | sed 's/_/-/g')
         source "${base16shell}/scripts/${"\${THEME_DASH}"}.sh"
+
+        function search-edit() {
+          eval "$FZF_DEFAULT_COMMAND" | fzf | xargs nvr -s
+        }
+        zle -N search-edit
+        bindkey "^P" search-edit
+        function search-text-edit() {
+          rg --color always -n . | fzf --ansi | awk -F ':' '{print $2 " " $1}' | read line filename; if [ ! -z "$line" ]; then nvr -s "+${line}" "$filename"; fi
+        }
+        zle -N search-text-edit
+        bindkey "^S" search-text-edit
       '';
     };
   };
