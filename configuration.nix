@@ -264,6 +264,7 @@ in
     git
     jq
     neovim-remote
+    neofetch
     nixpkgs-fmt
     nix-prefetch-github
     ripgrep

@@ -33,13 +33,5 @@ pkgs.stdenv.mkDerivation rec {
     cp -a src/firefox $out/share/doc/${pname}
     rm $out/share/themes/*/{AUTHORS,COPYING}
   '';
-
-  meta = with pkgs.stdenv.lib; {
-    description = "Flat Design theme for GTK based desktop environments";
-    homepage = "https://vinceliuice.github.io/Qogir-theme";
-    license = licenses.gpl3;
-    platforms = platforms.unix;
-    maintainers = [ maintainers.romildo ];
-  };
 }
 
