@@ -15,11 +15,7 @@ let
     allowImportFromDerivation = true;
   };
 
-  pactlCmd = command:
-    let
-      res = "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native ${command}'";
-    in
-    res;
+  pactlCmd = command: "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native ${command}'";
 in
 {
   # nixpkgs.overlays = [
