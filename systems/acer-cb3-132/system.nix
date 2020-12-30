@@ -33,19 +33,21 @@ in
     kernelPatches.export_kernel_fpu_functions."5.3"
   ];
 
-  services.xserver.libinput.enable = true;
-  # TODO This failed when trying to install with it...
-  # networking.wireless.enable = true;
   networking.networkmanager.enable = true;
 
   programs.light.enable = true;
+
   services.actkbd = {
     enable = true;
     bindings = [
-      { keys = [ 65 ]; events = [ "key" ]; attributes = [ "exec" ]; command = "/run/current-system/sw/bin/light -A 10"; }
-      { keys = [ 64 ]; events = [ "key" ]; attributes = [ "exec" ]; command = "/run/current-system/sw/bin/light -U 10"; }
+      { keys = [ 65 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
+      { keys = [ 64 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
+      { keys = [ 66 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native set-sink-mute 0 toggle'"; }
+      { keys = [ 67 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native set-sink-volume 0 -10%'"; }
+      { keys = [ 68 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native set-sink-volume 0 +10%'"; }
     ];
   };
+  services.xserver.libinput.enable = true;
 
   # Module listed extracted from GalliumOS 3.1.
   # TODO Find way to automate grabbing this list in the future.
