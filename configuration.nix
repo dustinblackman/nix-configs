@@ -463,7 +463,7 @@ in
         zle -N search-edit
         bindkey "^P" search-edit
         function search-text-edit() {
-          rg --color always -n . | fzf --ansi | awk -F ':' '{print $2 " " $1}' | read line filename; if [ ! -z "$line" ]; then nvr -s "+${line}" "$filename"; fi
+          rg --color always -n . | fzf --ansi | awk -F ':' '{print $2 " " $1}' | read line filename; if [ ! -z "$line" ]; then nvr -s "+$line" "$filename"; fi
         }
         zle -N search-text-edit
         bindkey "^S" search-text-edit
