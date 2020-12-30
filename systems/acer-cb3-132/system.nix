@@ -49,8 +49,8 @@ in
       { keys = [ 65 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
       { keys = [ 64 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
       { keys = [ 66 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-mute 0 toggle"}"; }
-      { keys = [ 67 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native set-sink-volume 0 -10%'"; }
-      { keys = [ 68 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native set-sink-volume 0 +10%'"; }
+      { keys = [ 67 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-volume 0 -10%"} && ${pactlCmd "set-sink-mute 0 0"}"; }
+      { keys = [ 68 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-volume 0 +10%"} && ${pactlCmd "set-sink-mute 0 0"}"; }
     ];
   };
   services.xserver.libinput.enable = true;
