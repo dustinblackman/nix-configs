@@ -16,9 +16,9 @@ let
   };
 in
 {
-  nixpkgs.overlays = [
-    (import ./overlays.nix)
-  ];
+  # nixpkgs.overlays = [
+  # (import ./overlays.nix)
+  # ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -37,6 +37,15 @@ in
   # TODO This failed when trying to install with it...
   # networking.wireless.enable = true;
   networking.networkmanager.enable = true;
+
+  programs.light.enable = true;
+  services.actkbd = {
+    enable = true;
+    bindings = [
+      { keys = [ 224 ]; events = [ "key" ]; command = "/run/wrappers/bin/light -A 10"; }
+      { keys = [ 225 ]; events = [ "key" ]; command = "/run/wrappers/bin/light -U 10"; }
+    ];
+  };
 
   # Module listed extracted from GalliumOS 3.1.
   # TODO Find way to automate grabbing this list in the future.
