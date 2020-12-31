@@ -1,3 +1,6 @@
+" Disable polygot packages that use other plugins
+let g:polyglot_disabled = ['go', 'rust', 'ruby', 'javascript', 'json', 'html', 'jsx', 'scss', 'typescript', 'vue', 'markdown']
+
 " :PlugInstall
 call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
@@ -123,9 +126,6 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 if (has("termguicolors"))
  set termguicolors
 endif
-
-" Disable polygot packages that use other plugins
-let g:polyglot_disabled = ['go', 'rust', 'ruby', 'javascript', 'json', 'html', 'jsx', 'scss', 'typescript', 'vue', 'markdown']
 
 " Preset syntaxes
 autocmd BufNewFile,BufRead *.marko set filetype=marko.html

@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 let
   galliumSrc = pkgs.fetchFromGitHub {
     owner = "GalliumOS";
@@ -15,7 +14,8 @@ let
     allowImportFromDerivation = true;
   };
 
-  pactlCmd = command: "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'pactl -s unix:/run/user/1000/pulse/native ${command}'";
+  runUser = command: "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'DISPLAY=:0.0 ${command}'";
+  pactlCmd = command: runUser "pactl -s unix:/run/user/1000/pulse/native ${command}";
 in
 {
   # nixpkgs.overlays = [
@@ -47,6 +47,7 @@ in
       { keys = [ 66 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-mute 0 toggle"}"; }
       { keys = [ 67 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-volume 0 -10%"} && ${pactlCmd "set-sink-mute 0 0"}"; }
       { keys = [ 68 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-volume 0 +10%"} && ${pactlCmd "set-sink-mute 0 0"}"; }
+      # { keys = [ 125 ]; events = [ "key" ]; command = runUser "xdotool key Escape"; }
     ];
   };
   services.xserver.libinput.enable = true;

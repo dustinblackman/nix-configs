@@ -296,6 +296,7 @@ in
     xarchiver
     plank
     xfce.xfce4-battery-plugin
+    xdotool
 
     # Apps
     spotify
