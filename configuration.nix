@@ -364,6 +364,7 @@ in
         xfconf-query -c xfce4-panel -p /plugins/plugin-1/button-icon -s "ghostwriter"
         xfconf-query -c xfce4-panel -p /panels/panel-1/enter-opacity -s 95
         xfconf-query -c xfce4-panel -p /panels/panel-1/leave-opacity -s 95
+        xfconf-query -c xfce4-session -p /general/LockCommand -s "xfce4-session-logout --switch-user"
       }
       $DRY_RUN_CMD runChanges
     '';
