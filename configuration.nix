@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, lib, ... }:
-
 let
   inherit (pkgs) mkYarnPackage yarn2nix;
 
@@ -92,6 +91,18 @@ in
   ];
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.packageOverrides = pkgs: {
+    nur = import
+      (pkgs.fetchFromGitHub {
+        owner = "nix-community";
+        repo = "NUR";
+        rev = "7067643546ecee715070bb4b7735862a67eef03c";
+        sha256 = "1y7xkdz171gvi1hmka1r4kgxjnf3c58hbipk133d4qkf4wwfswxm";
+      })
+      {
+        inherit pkgs;
+      };
+  };
 
   # Boot loader animation
   # Boots so fast you never see it...
@@ -278,11 +289,15 @@ in
     rustup
     python3
 
-    # Apps
+    # System Apps
     albert
     xarchiver
     plank
     xfce.xfce4-battery-plugin
+
+    # Apps
+    spotify
+    vlc
 
     # Themes.
     qogir-icon-theme
@@ -333,16 +348,19 @@ in
       enable = true;
       platformTheme = "gtk";
     };
-    # TODO add cursur theme and top bar transparency.
     home.activation.xfceTheme = hmLib.dag.entryAfter [ "writeBoundary" ] ''
       runChanges() {
         export DISPLAY=:0.0
         xfconf-query -c xsettings -p /Net/ThemeName -s "${locals.theme.name}"
         xfconf-query -c xsettings -p /Net/IconThemeName -s "${locals.iconTheme.name}"
         xfconf-query -c xsettings -p /Gtk/FontName -s "${locals.systemFont.name} 10"
+        xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "${locals.theme.name} 10"
         xfconf-query -c xfwm4 -p /general/title_font -s "${locals.systemFont.name} 10"
         xfconf-query -c xfwm4 -p /general/button_layout -s "CHM|"
         xfconf-query -c xfwm4 -p /general/title_alignment -s "left"
+        xfconf-query -c xfce4-panel -p /plugins/plugin-1/button-icon -s "ghostwriter"
+        xfconf-query -c xfce4-panel -p /panels/panel-1/enter-opacity -s 95
+        xfconf-query -c xfce4-panel -p /panels/panel-1/leave-opacity -s 95
       }
       $DRY_RUN_CMD runChanges
     '';
@@ -444,11 +462,11 @@ in
       plugins = [
         {
           name = "alias-tips";
-          # TODO Change to fetchFromGitHub
-          src = builtins.fetchGit {
-            url = "https://github.com/djui/alias-tips.git";
+          src = pkgs.fetchFromGitHub {
+            owner = "djui";
+            repo = "alis-tips";
             rev = "40d8e206c6d6e41e039397eb455bedca578d2ef8";
-            ref = "master";
+            sha256 = "17cifxi4zbzjh1damrwi2fyhj8x0y2m2qcnwgh4i62m1vysgv9xb";
           };
         }
       ];
