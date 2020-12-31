@@ -274,6 +274,8 @@ in
     dmidecode
     git
     jq
+    htop
+    iotop
     neovim-remote
     neofetch
     nixpkgs-fmt
@@ -316,6 +318,7 @@ in
       ankacoder-condensed
       (nerdfonts.override { fonts = [ "DroidSansMono" ]; })
       noto-fonts-emoji
+      twemoji-color-font
     ];
     fontconfig.defaultFonts.emoji = [ "Noto Color Emoji" ];
   };
