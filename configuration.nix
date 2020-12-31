@@ -403,7 +403,7 @@ in
       enable = true;
       enableZshIntegration = true;
       defaultCommand = ''
-        rg -l ""
+        rg -l \'\'
       '';
     };
 
