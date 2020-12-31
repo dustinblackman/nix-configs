@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 let
+  # TODO Move locals out in to it's own file so it can be brought in here.
+  locals = {
+    username = "dustin";
+  };
+
   galliumSrc = pkgs.fetchFromGitHub {
     owner = "GalliumOS";
     repo = "linux";
@@ -35,22 +40,22 @@ in
     kernelPatches.export_kernel_fpu_functions."5.3"
   ];
 
+  security.wrappers = {
+    light = {
+      source = "${pkgs.light}/bin/light";
+      owner = "root";
+      group = "root";
+    };
+  };
+
   networking.networkmanager.enable = true;
 
   programs.light.enable = true;
-
-  services.actkbd = {
-    enable = true;
-    bindings = [
-      { keys = [ 65 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 10"; }
-      { keys = [ 64 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 10"; }
-      { keys = [ 66 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-mute 0 toggle"}"; }
-      { keys = [ 67 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-volume 0 -10%"} && ${pactlCmd "set-sink-mute 0 0"}"; }
-      { keys = [ 68 ]; events = [ "key" ]; command = "${pactlCmd "set-sink-volume 0 +10%"} && ${pactlCmd "set-sink-mute 0 0"}"; }
-      # { keys = [ 125 ]; events = [ "key" ]; command = runUser "xdotool key Escape"; }
-    ];
-  };
   services.xserver.libinput.enable = true;
+
+  home-manager.users."${locals.username}" = {
+    home.file.".xbindkeysrc".source = ./xbindkeysrc;
+  };
 
   # Module listed extracted from GalliumOS 3.1.
   # TODO Find way to automate grabbing this list in the future.

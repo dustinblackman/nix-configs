@@ -297,6 +297,8 @@ in
     plank
     xfce.xfce4-battery-plugin
     xdotool
+    xbindkeys
+    xbindkeys-config
 
     # Apps
     spotify
@@ -337,6 +339,7 @@ in
     home.file.".xprofile".executable = true;
     home.file.".xprofile".text = ''
       #!/usr/bin/env bash
+      (xbindkeys || echo "") &
       plank &
       albert &
     '';
