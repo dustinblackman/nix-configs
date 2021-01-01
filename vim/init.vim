@@ -10,7 +10,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'vimlab/split-term.vim'
 Plug 'scrooloose/nerdtree'
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'terryma/vim-multiple-cursors'
@@ -32,7 +32,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'mattboehm/vim-unstack'
 Plug 'qpkorr/vim-bufkill'
-" Plug 'camspiers/lens.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Syntaxes
@@ -316,6 +315,8 @@ map <C-S> <Plug>CtrlSFPrompt
 
 " FZF
 map <C-P> :FZF<CR>
+let g:fzf_preview_window = []
+let g:fzf_layout = { 'down': '40%' }
 
 " Doc key bindings
 nnoremap <silent> K :call <SID>show_documentation()<CR>

@@ -270,12 +270,12 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # TODO sort
     dmidecode
     git
     jq
     htop
     iotop
+    neovim
     neovim-remote
     neofetch
     nixpkgs-fmt
@@ -428,12 +428,6 @@ in
     home.file.".config/coc/extensions/yarn.lock".source = "${localpkgs.coc}/libexec/coc/deps/coc/yarn.lock";
     home.file.".config/coc/extensions/node_modules".source = "${localpkgs.coc}/libexec/coc/node_modules";
 
-    programs.neovim = {
-      enable = true;
-      # Not using helpers to move vim config. Doing it by hand.
-      # TODO Need 0.5.0 dev branch.
-    };
-
     programs.tmux = {
       enable = true;
       extraConfig = (builtins.readFile ./tmux.conf);
@@ -479,6 +473,8 @@ in
         }
       ];
       initExtra = ''
+        export VISUAL=nvim
+        export EDITOR="$VISUAL"
         export THEME="${locals.shellTheme}"
         export THEME_DASH=$(echo "$THEME" | sed 's/_/-/g')
         source "${base16shell}/scripts/${"\${THEME_DASH}"}.sh"
@@ -493,6 +489,32 @@ in
         }
         zle -N search-text-edit
         bindkey "^S" search-text-edit
+
+        # Neovim helpers
+        alias e='nvim'
+        alias ed='nvim'
+        alias er='nvim'
+        alias eh='nvim'
+        if [ -n "${"\${NVIM_LISTEN_ADDRESS + x}"}" ]; then
+          alias e='nvr --remote-tab'
+          alias ed='nvr -o'
+          alias er='nvr -O'
+          alias eh='nvr'
+        fi
+
+        # Git helpers
+        alias gp='[[ -z $(git config "branch.$(git symbolic-ref --short HEAD).merge") ]] &&
+                   git push -u origin $(git symbolic-ref --short HEAD) ||
+                   git push'
+
+        function opr() {
+          open "$(git config remote.origin.url | sed 's/git@\(.*\):\(.*\).git/https:\/\/\1\/\2/' | sed 's/\.git//g')/compare/master...$(git rev-parse --abbrev-ref HEAD)?expand=1&assignees=dustinblackman"
+        }
+
+        # Command helpers
+        alias gmr=`gomodrun`
+        alias bn='npx babel-node'
+        alias ts='npx -s zsh ts-node'
       '';
     };
   };

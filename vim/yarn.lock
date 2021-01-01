@@ -149,99 +149,99 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-coc-css@>=1.2.3:
+coc-css@1.2.6:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/coc-css/-/coc-css-1.2.6.tgz#71c448294aa90e6f4b8f354d0454279c7bf2ea5d"
   integrity sha512-eVzucf/n0T9Sap+9HbKeW6XhMle1Q/2aURaE9BVTNHFW9eqFlKq72l/38NzrUYbdCpQh8foDsoKAqbFsAnBFYw==
 
-coc-dictionary@^1.2.2:
+coc-dictionary@1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/coc-dictionary/-/coc-dictionary-1.2.2.tgz#83a1d37848890f21d38e0fae11ee1b5772c820f4"
   integrity sha512-FbcxcfBy+9ZJeNGJsS0c6RJf0Dyl3l5w+Nl4czcnVwXOYaNa350sqClZ7T3KP2oaLHeLVLHbbms8CDjZ3GNg0w==
 
-coc-emmet@>=1.1.4:
+coc-emmet@1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/coc-emmet/-/coc-emmet-1.1.6.tgz#800ba9df13e8e6ac60f1b837024b64a908f0c229"
   integrity sha512-lvHA9iSgU/46Iw7E14tSP+Hh1e6STYUegqTBGDPQ/9L9JOicE2USqwuo2y5cbslc2RQqv3EdUIr9nQf0T725mQ==
   dependencies:
     vscode-emmet-helper "^1.2.15"
 
-coc-emoji@^1.2.3:
+coc-emoji@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/coc-emoji/-/coc-emoji-1.2.3.tgz#e4657414c14b957be44f0a0c1369b136f6e90fab"
   integrity sha512-XyrHPx7pdY1IuTTxJ/1DJtsyUvB+J5WbK1i6dg0RCQhymAa4SDgEBLHA1deh9cFWEIhv3qejCQBj+xx4wdfAxw==
 
-coc-html@>=1.2.4:
+coc-html@1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/coc-html/-/coc-html-1.3.2.tgz#1b7bb3d2c90cd731ccc2010e4f80ea3caa118330"
   integrity sha512-8upyERwR/7zZNDkATpKy1aIyflzwfsgercRsHm1OG/ECRG2FpUWYkHywHBDbWAdHsipbd2WoO0nr3Ct22JV4oA==
   dependencies:
     typescript "^4"
 
-coc-json@>=1.2.6:
+coc-json@1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/coc-json/-/coc-json-1.3.2.tgz#02c2ec78862cd421d650216de3fbdb466295f75a"
   integrity sha512-4wSADhO6oE2lxyYJw1cZqz6eYTrJWI4wHLETSTwhkkpZrPCNJA7mSmuB6oowxt7kJRmDVAIZP2mFyLTXU0jU6w==
 
-coc-python@>=1.2.12:
+coc-python@1.2.13:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/coc-python/-/coc-python-1.2.13.tgz#74c5b9d3413a13310027f93578915bac33692c62"
   integrity sha512-thsXkbwwJMpiGa/1GiPvFnbWtC5K8QcZvcUtoc4lU8Hf38LbywK5qRp6M7tOAabJOq5dYcIYYbPZWzGwhoZEiw==
 
-coc-rust-analyzer@>=0.7.2:
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/coc-rust-analyzer/-/coc-rust-analyzer-0.24.0.tgz#d507cfc857b0918054390858dd16f9f991650ed7"
-  integrity sha512-2A7hVl+fkRyI3weWSUCSLIsgbnff9SDMl3rDG/4GbTIi7AEmV4E+0EsnWkXbImKEKHKIp3gHCRcK6gQUY0/HUw==
+coc-rust-analyzer@0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/coc-rust-analyzer/-/coc-rust-analyzer-0.25.0.tgz#10d31d9a92969a95e979c44a729d7b5696cfcc8b"
+  integrity sha512-+Diufwhz7JMJlbdNuwkcfcWnGXS5neoJlSW897kI0zfYL9H0R+fJXwiEYy0/f2UWn2eO1pjy0svqyXlacyvAoQ==
 
-coc-solargraph@>=1.1.7:
+coc-solargraph@1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/coc-solargraph/-/coc-solargraph-1.1.8.tgz#870149d329d75470e844885e0af393fdac8aeeef"
   integrity sha512-j0/S9ycyP4cdFhTu3FGaY4t0ZSn1K5EFWi6A90nppQYPwrzSGo3tn5XDO44vaWsYhEUlQfQrXVwtFScKCdc1vg==
 
-coc-sql@>=0.2.24:
+coc-sql@0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/coc-sql/-/coc-sql-0.4.0.tgz#761fbe0149dbbee8401fad055f797963a498754a"
   integrity sha512-/8WR45g3ys2hL2NHpjNu8tSZgB3nq1EabSkE2DDx5P6lzJIHIMQlf1jt3Fb3esWd3mpl5lrd8iHHWdrqP2aXtw==
   dependencies:
     pg-query-emscripten "^0.1.0"
 
-coc-syntax@^1.2.4:
+coc-syntax@1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/coc-syntax/-/coc-syntax-1.2.4.tgz#1030f077f0f74c2d6a7176b462010613707b0d31"
   integrity sha512-XRCvFL8yjPvTID0XY0Y7JjzGk9Gl2g6NOEVezWIuoIE2Dk68upjOyldoCrm2rKBQC9ebTTK7xX9ZcWyKj7+Zcg==
 
-coc-tag@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/coc-tag/-/coc-tag-1.2.4.tgz#5d302ad525aa9f1bd73ea35814cc194f232111f6"
-  integrity sha512-nalUxIfP8GcQvpqg7j8Lt7g8hKYI72CnIFTyDX1FFwPrYrfL08sKqbq0SPvl/nvaN+PhAyHT5juKtL1PpQ47pA==
+coc-tag@1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/coc-tag/-/coc-tag-1.2.5.tgz#aab11e449f32289ec835dc131b1fbadd59736840"
+  integrity sha512-1YNb1C1h3iI5trkBn3L6fzm0yDmlt9BTOySHl651wgEyyCueZqZysIa+DHLUklZ2xgDy5szpWwUc598zKT/zlw==
 
-coc-tsserver@>=1.4.15:
+coc-tsserver@1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/coc-tsserver/-/coc-tsserver-1.6.6.tgz#8af96e33e14195f8fcb809efb61020cb7584076d"
   integrity sha512-Rij5moc30YSnhYkiSwilLYorbRkmYPn9uN5b4EMXrNo0wWGReFYRRCxq72BoDEIwbTE3MsuVb67irdMukJ95eA==
   dependencies:
     typescript "^4.1.3"
 
-coc-vetur@>=1.1.10:
+coc-vetur@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/coc-vetur/-/coc-vetur-1.2.3.tgz#037c5caed68bfba33a864d2550e5c1e4aaa5e571"
   integrity sha512-2SHFFjxkw2kl0hADDNUYX85OR/PbjqYPxFnpNp6G83SbeZBoJN8KDUl7TrIJ7BZ4UCiIilXnKQCHpxREiVPAEg==
   dependencies:
     vls "^0.5.9"
 
-coc-word@^1.2.2:
+coc-word@1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/coc-word/-/coc-word-1.2.2.tgz#8cf213a9a1e8bf5b2cb74b9ee2a1a93bff205c78"
   integrity sha512-+qSB6KVXTRPeC6UDZHt8CyEO2OPVEjVda2eXqNuR8VJ7gdSCsUOkL1dorbIvQUuOVWBlN4Pdlad7UZoHSqRJvw==
 
-coc-yaml@>=1.0.4:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/coc-yaml/-/coc-yaml-1.2.0.tgz#a1f89922464df47836e32f6b6d4303ddf0779a0b"
-  integrity sha512-2YiWWRFc/No72jVpn9f0mvNthvBhpi1AmzHrTn73Hmdbnz6StAMfu2PXyDjm+JeIdRtsVOb0QxFmTqhNIOEJXw==
+coc-yaml@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/coc-yaml/-/coc-yaml-1.3.0.tgz#247923dfaf9532dda782b00a44fb02a4be00eb4f"
+  integrity sha512-i71kwyF20R+vAHhuF9uBbvs6kkvKuSifMkxTeIbBnLobHE500rSSwUD2SPIvt+I1g1rfHrM0Sj89fzrhDA60NQ==
   dependencies:
     prettier "2.0.5"
     vscode-json-languageservice "^3.10.0"
-    yaml-language-server next
+    yaml-language-server "^0.13.1-d0f9b44.0"
 
 color-convert@^1.9.0:
   version "1.9.3"
@@ -354,9 +354,9 @@ escape-string-regexp@^1.0.5:
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
 eslint-plugin-vue@^7.1.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.3.0.tgz#0faf0fcf0e1b1052bf800d4dee42d64f50679cb0"
-  integrity sha512-4rc9xrZgwT4aLz3XE6lrHu+FZtDLWennYvtzVvvS81kW9c65U4DUzQQWAFjDCgCFvN6HYWxi7ueEtxZVSB+f0g==
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.4.0.tgz#27324cbe8f00705708c9fa9e8c0401d8f0742c20"
+  integrity sha512-bYJV3nHSGV5IL40Ti1231vlY8I2DzjDHYyDjRv9Z1koEI7qyV2RR3+uKMafHdOioXYH9W3e1+iwe4wy7FIBNCQ==
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
@@ -1160,10 +1160,10 @@ yaml-language-server-parser@next:
   resolved "https://registry.yarnpkg.com/yaml-language-server-parser/-/yaml-language-server-parser-0.1.3-fa8245c.0.tgz#da6c241bd23ee7303d035a99fdc01554e0193f70"
   integrity sha512-0QPUSsmMXHDpqj00xUrlMyqlEAwHHIAuz3wPMyprcCVYx7jh7oo91Z0nC/jhott4XAKp3iY3vjBsMxqszoZosA==
 
-yaml-language-server@next:
-  version "0.13.1-d896e46.0"
-  resolved "https://registry.yarnpkg.com/yaml-language-server/-/yaml-language-server-0.13.1-d896e46.0.tgz#3367a738aa883194dfeddc0f308bbd951f83be79"
-  integrity sha512-RiciKFo3Q3iMGdg60BoRrkFqUH9VBodx60xnC10dhnxo5Vxbpk78t90nbOVGiHY32Vx0c5vUXjdytaxb5rhd5g==
+yaml-language-server@^0.13.1-d0f9b44.0:
+  version "0.13.1-dcc82a9.0"
+  resolved "https://registry.yarnpkg.com/yaml-language-server/-/yaml-language-server-0.13.1-dcc82a9.0.tgz#d68f55e60023041b65550196fdb888ec489b74f9"
+  integrity sha512-26QP9JhfcrroDTeMv2OsY4eoI+NKb6tZwy1Uz0MBWi1uGmOw0/6aR9Oa3guOsC96U27GAqT6glRFMjCGqLro7A==
   dependencies:
     js-yaml "^3.13.1"
     jsonc-parser "^2.2.1"

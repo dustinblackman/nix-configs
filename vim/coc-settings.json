@@ -25,10 +25,7 @@
         "go"
       ],
       "trace.server": "verbose",
-      "enable": true,
-      "initializationOptions": {
-        "diagnosticsEnabled": true
-      }
+      "enable": true
     },
     "dockerfile": {
       "command": "docker-langserver",
