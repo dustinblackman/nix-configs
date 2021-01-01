@@ -472,12 +472,17 @@ in
         zle -N search-text-edit
         bindkey "^S" search-text-edit
 
+        # ZSH
+        unalias rm
+        unalias cp
+        unalias mv
+
         # Neovim helpers
         alias e='nvim'
         alias ed='nvim'
         alias er='nvim'
         alias eh='nvim'
-        if [ -n "${"\${NVIM_LISTEN_ADDRESS + x}"}" ]; then
+        if [ -n "${"\${NVIM_LISTEN_ADDRESS+x}"}" ]; then
           alias e='nvr --remote-tab'
           alias ed='nvr -o'
           alias er='nvr -O'
