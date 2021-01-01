@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 let
-  # TODO Move locals out in to it's own file so it can be brought in here.
-  locals = {
-    username = "dustin";
-  };
+  locals = import ../../locals.nix { inherit pkgs; };
 
   galliumSrc = pkgs.fetchFromGitHub {
     owner = "GalliumOS";
