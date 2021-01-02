@@ -15,9 +15,6 @@ let
     configfile = "${galliumSrc}/galliumos/config";
     allowImportFromDerivation = true;
   };
-
-  runUser = command: "/run/current-system/sw/bin/runuser -l $(ls /home) -c 'DISPLAY=:0.0 ${command}'";
-  pactlCmd = command: runUser "pactl -s unix:/run/user/1000/pulse/native ${command}";
 in
 {
   # nixpkgs.overlays = [
