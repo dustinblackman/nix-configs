@@ -188,10 +188,10 @@ coc-python@1.2.13:
   resolved "https://registry.yarnpkg.com/coc-python/-/coc-python-1.2.13.tgz#74c5b9d3413a13310027f93578915bac33692c62"
   integrity sha512-thsXkbwwJMpiGa/1GiPvFnbWtC5K8QcZvcUtoc4lU8Hf38LbywK5qRp6M7tOAabJOq5dYcIYYbPZWzGwhoZEiw==
 
-coc-rust-analyzer@0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/coc-rust-analyzer/-/coc-rust-analyzer-0.25.0.tgz#10d31d9a92969a95e979c44a729d7b5696cfcc8b"
-  integrity sha512-+Diufwhz7JMJlbdNuwkcfcWnGXS5neoJlSW897kI0zfYL9H0R+fJXwiEYy0/f2UWn2eO1pjy0svqyXlacyvAoQ==
+coc-rust-analyzer@0.27.0:
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/coc-rust-analyzer/-/coc-rust-analyzer-0.27.0.tgz#3c2eae01350db5f9831146257fa8ebf2f7035fc6"
+  integrity sha512-IQNwNKLCFeGQ9go+DJ4v2rdronRHPBiQdyIS2DGP0jTY0mYLT2yUYGg4hIjw16N7zmPwRIyLyk4AUIEMF/TJRA==
 
 coc-solargraph@1.1.8:
   version "1.1.8"
