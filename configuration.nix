@@ -78,8 +78,8 @@ in
       (pkgs.fetchFromGitHub {
         owner = "nix-community";
         repo = "NUR";
-        rev = "7067643546ecee715070bb4b7735862a67eef03c";
-        sha256 = "1y7xkdz171gvi1hmka1r4kgxjnf3c58hbipk133d4qkf4wwfswxm";
+        rev = "3c5682a995d7c01bef7617a86e3d6e8aed79a2f7";
+        sha256 = "009mk3rkjkrccb7mcmb4zg4m38zd8x0vs4xl6vn44mhcwn70875r";
       })
       {
         inherit pkgs;
@@ -275,6 +275,10 @@ in
     # Apps
     spotify
     vlc
+
+    # CLI Apps
+    nur.repos.dustinblackman.gomodrun
+    nur.repos.dustinblackman.fetch-hls
 
     # Themes.
     qogir-icon-theme
@@ -481,7 +485,7 @@ in
         }
 
         # Command helpers
-        alias gmr=`gomodrun`
+        alias gmr=gomodrun'
         alias bn='npx babel-node'
         alias ts='npx -s zsh ts-node'
       '';
