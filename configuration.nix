@@ -434,7 +434,7 @@ in
           name = "alias-tips";
           src = pkgs.fetchFromGitHub {
             owner = "djui";
-            repo = "alis-tips";
+            repo = "alias-tips";
             rev = "40d8e206c6d6e41e039397eb455bedca578d2ef8";
             sha256 = "17cifxi4zbzjh1damrwi2fyhj8x0y2m2qcnwgh4i62m1vysgv9xb";
           };
