@@ -485,7 +485,7 @@ in
         }
 
         # Command helpers
-        alias gmr=gomodrun'
+        alias gmr='gomodrun'
         alias bn='npx babel-node'
         alias ts='npx -s zsh ts-node'
       '';
