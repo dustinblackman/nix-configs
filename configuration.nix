@@ -78,8 +78,8 @@ in
       (pkgs.fetchFromGitHub {
         owner = "nix-community";
         repo = "NUR";
-        rev = "3c5682a995d7c01bef7617a86e3d6e8aed79a2f7";
-        sha256 = "009mk3rkjkrccb7mcmb4zg4m38zd8x0vs4xl6vn44mhcwn70875r";
+        rev = "733e6aeff00dc9e3004be3b19258f829585cbcec";
+        sha256 = "1699pjw5pmb5mb7z3fmixx5hh9sr0svncag9c62zrnbvkr301msk";
       })
       {
         inherit pkgs;
