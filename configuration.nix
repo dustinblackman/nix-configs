@@ -262,6 +262,8 @@ in
     yarn
     rustup
     python3
+    pipenv
+    python38Packages.pynvim
 
     # System Apps
     albert
@@ -441,6 +443,7 @@ in
         }
       ];
       initExtra = ''
+        export PATH="$PATH:${localpkgs.coc}/libexec/coc/node_modules/.bin"
         export VISUAL=nvim
         export EDITOR="$VISUAL"
         export THEME="${locals.shellTheme}"

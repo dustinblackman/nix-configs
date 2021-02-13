@@ -183,10 +183,12 @@ coc-json@1.3.2:
   resolved "https://registry.yarnpkg.com/coc-json/-/coc-json-1.3.2.tgz#02c2ec78862cd421d650216de3fbdb466295f75a"
   integrity sha512-4wSADhO6oE2lxyYJw1cZqz6eYTrJWI4wHLETSTwhkkpZrPCNJA7mSmuB6oowxt7kJRmDVAIZP2mFyLTXU0jU6w==
 
-coc-python@1.2.13:
-  version "1.2.13"
-  resolved "https://registry.yarnpkg.com/coc-python/-/coc-python-1.2.13.tgz#74c5b9d3413a13310027f93578915bac33692c62"
-  integrity sha512-thsXkbwwJMpiGa/1GiPvFnbWtC5K8QcZvcUtoc4lU8Hf38LbywK5qRp6M7tOAabJOq5dYcIYYbPZWzGwhoZEiw==
+coc-pyright@1.1.109:
+  version "1.1.109"
+  resolved "https://registry.yarnpkg.com/coc-pyright/-/coc-pyright-1.1.109.tgz#ac03fb1295f025ec77d06bb39da5a9d30f8177a7"
+  integrity sha512-Z2tb2KBGjcZNReb64vz3rvYGlIhLKv0UOh5jMlnChVjguUn/41Vqg/X6HhMY4dPAM+wf3l8RRSDTXZ4hDyQO6A==
+  dependencies:
+    pyright "^1.1.109"
 
 coc-rust-analyzer@0.27.0:
   version "0.27.0"
@@ -841,6 +843,11 @@ punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+pyright@^1.1.109:
+  version "1.1.109"
+  resolved "https://registry.yarnpkg.com/pyright/-/pyright-1.1.109.tgz#20803e9e710b1885826911dbfe5ca5518e05f5bb"
+  integrity sha512-CAaPMKMmeucbbaDLADjhtOdr/KEKknALovBlGh+VbFqAVta1rxrytiIzF2V6xKWx0QpKdkRixkItSa8rTWalnw==
 
 regexpp@^3.1.0:
   version "3.1.0"

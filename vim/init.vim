@@ -1,5 +1,5 @@
 " Disable polygot packages that use other plugins
-let g:polyglot_disabled = ['go', 'rust', 'ruby', 'javascript', 'json', 'html', 'jsx', 'scss', 'typescript', 'vue', 'markdown']
+let g:polyglot_disabled = ['go', 'rust', 'ruby', 'javascript', 'json', 'html', 'jsx', 'scss', 'typescript', 'vue', 'markdown', 'python']
 
 " :PlugInstall
 call plug#begin('~/.vim/plugged')
@@ -46,6 +46,7 @@ Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'gabrielelana/vim-markdown', {'for':'markdown'}
 Plug 'jparise/vim-graphql', {'for':'gql'} " This may be wrong
+Plug 'numirias/semshi', {'for': 'python', 'do': ':UpdateRemotePlugins'}
 Plug 'sheerun/vim-polyglot'
 
 " Autocomplete
@@ -142,8 +143,8 @@ let g:ctrlsf_auto_focus = {
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sql_pgformatter_options = '-U 2 -u 2 -s 2'
-let g:ale_fixers = {'typescript': ['eslint'], 'javascript': ['eslint'], 'scss': ['stylelint'], 'sql': ['pgformatter'], 'vue': ['eslint', 'stylelint'], 'terraform': ['terraform'], 'nix': ['nixpkgs-fmt']}
-let g:ale_linters = {'javascript': ['eslint'], 'scss': ['stylelint'], 'typescript': ['eslint'], 'vue': ['eslint', 'stylelint']}
+let g:ale_fixers = {'typescript': ['eslint'], 'javascript': ['eslint'], 'scss': ['stylelint'], 'sql': ['pgformatter'], 'vue': ['eslint', 'stylelint'], 'terraform': ['terraform'], 'nix': ['nixpkgs-fmt'], 'python': ['yapf']}
+let g:ale_linters = {'javascript': ['eslint'], 'scss': ['stylelint'], 'typescript': ['eslint'], 'vue': ['eslint', 'stylelint'], 'python': ['pylint']}
 let g:ale_linter_aliases = {'vue': ['vue', 'typescript', 'scss']}
 
 " Echodot"
@@ -176,7 +177,6 @@ let g:vim_json_syntax_conceal = 0
 " Go
 let g:go_metalinter_command='golangci-lint'
 let g:go_fmt_command = 'goimports'
-let g:go_fmt_options = { 'goimports': '-local github.com/Flatbook/sonder-cli' }
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -190,6 +190,9 @@ let g:go_jump_to_error = 0
 " Rust
 let b:ale_rust_rls_config = {'rust': {'clippy_preference': 'on'}}
 let g:ale_rust_cargo_use_clippy = 1
+
+" Python
+let g:ale_python_pylint_executable = 'pipenv'
 
 " Terraform
 let g:deoplete#omni_patterns = {}
