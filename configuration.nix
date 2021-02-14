@@ -491,6 +491,9 @@ in
         alias gmr='gomodrun'
         alias bn='npx babel-node'
         alias ts='npx -s zsh ts-node'
+        function py() {
+          pipenv run python "$@"
+        }
       '';
     };
   };
