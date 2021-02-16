@@ -242,7 +242,7 @@ in
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-    dmidecode
+    # dmidecode
     git
     jq
     htop
@@ -261,7 +261,6 @@ in
     nodejs-12_x
     yarn
     rustup
-    python3
     pipenv
     python38Packages.pynvim
 
@@ -277,7 +276,7 @@ in
 
     # Apps
     spotify
-    vlc
+    # vlc
 
     # CLI Apps
     nur.repos.dustinblackman.gomodrun
