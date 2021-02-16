@@ -267,6 +267,7 @@ in
 
     # System Apps
     albert
+    gparted
     xarchiver
     plank
     xfce.xfce4-battery-plugin
