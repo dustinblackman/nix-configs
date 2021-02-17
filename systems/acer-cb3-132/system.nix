@@ -65,7 +65,6 @@ in
     builders-use-substitutes = true
   '';
 
-  environment.etc."ssh/nix-docker-builder".source = ./nix-docker-builder;
   programs.ssh.extraConfig = ''
     Host dockerbuilder
       HostName 192.168.50.98
@@ -73,7 +72,7 @@ in
       User root
 
       IdentitiesOnly yes
-      IdentityFile ${environment.etc."ssh/nix-docker-builder".target}
+      IdentityFile ${./nix-docker-builder}
   '';
 
   # Module listed extracted from GalliumOS 3.1.
