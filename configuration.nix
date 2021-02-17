@@ -261,6 +261,7 @@ in
     nodejs-12_x
     yarn
     rustup
+    python3
     pipenv
     python38Packages.pynvim
 
@@ -276,7 +277,7 @@ in
 
     # Apps
     spotify
-    # vlc
+    vlc
 
     # CLI Apps
     nur.repos.dustinblackman.gomodrun

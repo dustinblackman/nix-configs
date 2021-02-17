@@ -51,6 +51,31 @@ in
     home.file.".xbindkeysrc".source = ./xbindkeysrc;
   };
 
+  # Laptop is too slow, use remote docker image instead. For now hardcoded to macbook.
+  nix.buildMachines = [{
+    hostName = "dockerbuilder";
+    system = "x86_64-linux";
+    maxJobs = 1;
+    speedFactor = 2;
+    supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
+    mandatoryFeatures = [ ];
+  }];
+  nix.distributedBuilds = true;
+  nix.extraOptions = ''
+    builders-use-substitutes = true
+  '';
+
+  environment.etc."ssh/nix-docker-builder".source = ./nix-docker-builder;
+  programs.ssh.extraConfig = ''
+    Host dockerbuilder
+      HostName 192.168.50.98
+      Port 3022
+      User root
+
+      IdentitiesOnly yes
+      IdentityFile ${environment.etc."ssh/nix-docker-builder".target}
+  '';
+
   # Module listed extracted from GalliumOS 3.1.
   # TODO Find way to automate grabbing this list in the future.
   boot.blacklistedKernelModules = [
