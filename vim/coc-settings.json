@@ -18,17 +18,6 @@
         "nix"
       ]
     },
-    "go-langserver": {
-      "command": "gopls",
-      "args": [
-        "serve"
-      ],
-      "filetypes": [
-        "go"
-      ],
-      "trace.server": "verbose",
-      "enable": true
-    },
     "dockerfile": {
       "command": "docker-langserver",
       "filetypes": [

@@ -1,5 +1,5 @@
 " Disable polygot packages that use other plugins
-let g:polyglot_disabled = ['go', 'rust', 'ruby', 'javascript', 'json', 'html', 'jsx', 'scss', 'typescript', 'vue', 'markdown']
+let g:polyglot_disabled = ['rust', 'ruby', 'javascript', 'json', 'html', 'jsx', 'scss', 'typescript', 'vue', 'markdown']
 
 " :PlugInstall
 call plug#begin('~/.vim/plugged')
@@ -35,17 +35,17 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Syntaxes
-Plug 'fatih/vim-go', { 'for': 'go',  'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'for': 'go',  'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'html'] }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'jsx' }
 Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
-Plug 'posva/vim-vue', {'for': 'vue'}
+" Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+" Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+" Plug 'posva/vim-vue', {'for': 'vue'}
 Plug 'gabrielelana/vim-markdown', {'for':'markdown'}
-Plug 'jparise/vim-graphql', {'for':'gql'} " This may be wrong
+" Plug 'jparise/vim-graphql', {'for':'gql'} " This may be wrong
 " Plug 'numirias/semshi', {'for': 'python', 'do': ':UpdateRemotePlugins'}
 Plug 'sheerun/vim-polyglot'
 
@@ -53,7 +53,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
 
 " Themes
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes', { 'commit': '571a9308c0aed6a690f25194461b2eada81f6b57' }
 Plug 'chriskempson/base16-vim'
 Plug 'ap/vim-css-color', {'for': ['css', 'scss', 'less', 'html', 'jsx', 'vue']}
 
@@ -143,8 +143,8 @@ let g:ctrlsf_auto_focus = {
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_sql_pgformatter_options = '-U 2 -u 2 -s 2'
-let g:ale_fixers = {'typescript': ['eslint'], 'javascript': ['eslint'], 'scss': ['stylelint'], 'sql': ['pgformatter'], 'vue': ['eslint', 'stylelint'], 'terraform': ['terraform'], 'nix': ['nixpkgs-fmt'], 'python': ['black', 'isort']}
-let g:ale_linters = {'javascript': ['eslint'], 'scss': ['stylelint'], 'typescript': ['eslint'], 'vue': ['eslint', 'stylelint'], 'python': ['pylint']}
+let g:ale_fixers = {'typescript': ['eslint'], 'typescriptreact': ['eslint'], 'javascript': ['eslint'], 'scss': ['stylelint'], 'sql': ['pgformatter'], 'vue': ['eslint', 'stylelint'], 'terraform': ['terraform'], 'nix': ['nixpkgs-fmt'], 'python': ['black', 'isort'], 'go': ['gofmt', 'goimports']}
+let g:ale_linters = {'javascript': ['eslint'], 'scss': ['stylelint'], 'typescript': ['eslint'], 'typescriptreact': ['eslint'], 'vue': ['eslint', 'stylelint'], 'python': ['pylint'], 'go': ['golangci-lint', 'gofmt']}
 let g:ale_linter_aliases = {'vue': ['vue', 'typescript', 'scss']}
 
 " Echodot"
@@ -175,17 +175,20 @@ let g:vue_disable_pre_processors=1
 let g:vim_json_syntax_conceal = 0
 
 " Go
-let g:go_metalinter_command='golangci-lint'
-let g:go_fmt_command = 'goimports'
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_metalinter_autosave = 1
-let g:go_jump_to_error = 0
+" let g:go_metalinter_enabled = ['golint', 'errcheck']
+" let g:go_metalinter_command='golangci-lint'
+" let g:go_fmt_command = 'goimports'
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_fields = 1
+" let g:go_highlight_types = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_build_constraints = 1
+" let g:go_metalinter_autosave = 1
+" let g:go_jump_to_error = 0
 " let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'goconst', 'dupl', 'ineffassign', 'misspell']
+let g:ale_go_golangci_lint_options  = ''
+let g:ale_go_golangci_lint_package = 1
 
 " Rust
 let b:ale_rust_rls_config = {'rust': {'clippy_preference': 'on'}}
