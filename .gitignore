@@ -1,2 +1,3 @@
 _scripts/
 systems/default.nix
+node_modules

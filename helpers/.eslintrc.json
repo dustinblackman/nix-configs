@@ -1,0 +1,7 @@
+{
+  "extends": ["semistandard", "prettier"],
+  "rules": {
+    "camelcase": "off",
+    "quotes": ["error", "double"]
+  }
+}
