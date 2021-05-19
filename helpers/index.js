@@ -1,8 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-// TODO lint?
-
 const OPTIONS = {
   locals: {},
   templatefile: path.join(__dirname, "./kitty.conf"), // Meh.
